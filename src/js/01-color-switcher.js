@@ -7,7 +7,7 @@ const body = document.querySelector('body');
 let timer = null;
 
 function getRandomHexColor() {
-    const randomColor = `#${Math.floor(Math.random() * 823321141).toString(16)}`;
+    const randomColor = `#${Math.floor(Math.random() * 823321141).toString()}`;
     return randomColor;
 }
 
@@ -20,3 +20,8 @@ btnStart.addEventListener('click', () => {
 btnStop.addEventListener('click', () => {
     clearInterval(timer);
 });
+
+
+
+
+

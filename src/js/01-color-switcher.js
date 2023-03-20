@@ -7,21 +7,16 @@ const body = document.querySelector('body');
 let timer = null;
 
 function getRandomHexColor() {
-    const randomColor = `#${Math.floor(Math.random() * 823321141).toString()}`;
-    return randomColor;
+  const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  return randomColor;
 }
 
 btnStart.addEventListener('click', () => {
-    timer = setInterval(() => {
-        body.style.backgroundColor = `${getRandomHexColor()}`;
-    }, 1000);
+  timer = setInterval(() => {
+    body.style.backgroundColor = `${getRandomHexColor()}`;
+  }, 1000);
 });
 
 btnStop.addEventListener('click', () => {
-    clearInterval(timer);
+  clearInterval(timer);
 });
-
-
-
-
-
